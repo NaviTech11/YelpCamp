@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("../node_modules/express");
 const router = express.Router();
 const Campground = require("../models/campground");
 

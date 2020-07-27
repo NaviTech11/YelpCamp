@@ -1,10 +1,10 @@
-const express    = require("express"),
+const express    = require("./node_modules/express"),
       app        = express(),
       port       = 3000,
-      bodyParser = require("body-parser"),
+      bodyParser = require("./node_modules/body-parser"),
       mongoose   = require("mongoose"),
-      passport   = require("passport"),
-      LocalStrategy = require("passport-local"),
+      passport   = require("./node_modules/passport/lib"),
+      LocalStrategy = require("./node_modules/passport-local/lib"),
       Campground = require("./models/campground"),
       Comment    = require("./models/comment"),
       User       = require("./models/user"),
@@ -23,7 +23,7 @@ app.use(express.static(__dirname + "/public"));
 // seedDB(); //seed the database
 
 //PASSPORT CONFIG
-app.use(require("express-session")({
+app.use(require("./node_modules/express-session")({
     secret: "I love you, have a great day!",
     resave: false,
     saveUninitialized: false
